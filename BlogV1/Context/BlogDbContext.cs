@@ -11,6 +11,8 @@ namespace BlogV1.Context
                 "Integrated Security=True; TrustServerCertificate=True;");
         }
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
 
     }
 }
