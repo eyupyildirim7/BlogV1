@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -47,6 +49,8 @@
                     <span>Dashboard</span>
                 </a>
             </li>
+
+
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -58,18 +62,66 @@
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBlog"
-                   aria-expanded="true" aria-controls="collapseTwo">
+                   aria-expanded="true" aria-controls="collapseBlog">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Bloglarimiz</span>
                 </a>
                 <div id="collapseBlog" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Blog Islemleri:</h6>
-                        <a class="collapse-item" href="/admin/Blogs">Bloglarim</a>
-                        <a class="collapse-item" href="cards.html">Rapor</a>
+                        <a class="collapse-item" href="/Admin/Blogs">Bloglarim</a>
+                        @* <a class="collapse-item" href="/Admin/EditBlog">Blog Duzenleme</a> *@
                     </div>
                 </div>
             </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Yorumlarim
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseComment"
+                   aria-expanded="true" aria-controls="collapseComment">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Yorumlarimiz</span>
+                </a>
+                <div id="collapseComment" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Yorum Islemleri:</h6>
+                        <a class="collapse-item" href="/Admin/Comments">Yorumlarimiz</a>
+                        @* <a class="collapse-item" href="#">Yorum Duzenleme</a> *@
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Kullanicilar
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsers"
+                   aria-expanded="true" aria-controls="collapseUsers">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Kullanicilarimiz</span>
+                </a>
+                <div id="collapseUsers" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Yorum Islemleri:</h6>
+                        <a class="collapse-item" href="/Admin/Register">Kullanici Ekle</a>
+                    </div>
+                </div>
+            </li>
+
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">

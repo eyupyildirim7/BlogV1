@@ -1,0 +1,63 @@
+﻿@{
+    Layout = "/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Blog Duzenle</h1>
+    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+        <i class="fas fa-download fa-sm text-white-50"></i> Blog Ekle
+    </a>
+</div>
+
+
+
+
+
+<form action="/Admin/CreateBlog" method="post" id="createblogform">
+
+    <input type="hidden" name="Id"  />
+
+
+    <div class="form-group">
+        <input type="text" class="form-control form-control-user"
+               id="blogname" aria-describedby="blogname"
+               placeholder="Baslik Giriniz" name="Name" required>
+    </div>
+    <div class="form-group">
+        <textarea type="text" class="form-control form-control-user"
+                  id="blogdescription" placeholder="Aciklama Ekleyiniz" name="Description" rows="15" required></textarea>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control form-control-user"
+               id="blogimageurl" aria-describedby="blogname"
+               placeholder="Fotograf Url giriniz" name="Imageurl" required ">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control form-control-user"
+               id="blogtags" aria-describedby="blogname"
+               placeholder="Etiketleri giriniz" name="Tags"  required>
+    </div>
+
+
+
+    <button class="btn btn-success btn-icon-split" type="submit">
+        <span class="icon text-white-50">
+            <i class="fas fa-check"></i>
+        </span>
+        <span class="text">Ekle</span>
+    </button>
+
+  
+  
+    <a href="/Admin/Blogs" class="btn btn-secondary btn-icon-split">
+        <span class="icon text-white-50">
+            <i class="fas fa-arrow-right"></i>
+        </span>
+        <span class="text">Geri Don</span>
+    </a>
+   
+
+
+
+</form>
