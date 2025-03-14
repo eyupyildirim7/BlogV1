@@ -97,6 +97,10 @@ namespace BlogV1.Controllers
             _context.SaveChanges();
             return RedirectToAction("Comments");
         }
+        public IActionResult Register()
+        {
+            return View();
+        }
 
     }
 
