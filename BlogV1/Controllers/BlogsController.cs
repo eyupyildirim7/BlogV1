@@ -1,5 +1,8 @@
 ﻿using BlogV1.Context;
+using BlogV1.Identity;
 using BlogV1.Models;
+using BlogV1.Models.VıewModels;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogV1.Controllers
@@ -7,6 +10,7 @@ namespace BlogV1.Controllers
     public class BlogsController : Controller
     {
         private readonly BlogDbContext _context;
+        
 
         public BlogsController(BlogDbContext context)
         {
@@ -59,5 +63,10 @@ namespace BlogV1.Controllers
         public IActionResult Support() {
             return View();
                 }
+        public IActionResult Login()
+        {
+            return View();
+        }
+       
     }
 }

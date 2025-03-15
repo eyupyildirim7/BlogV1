@@ -20,7 +20,7 @@ builder.Services.AddDbContext<BlogIdentityDbContext>(options =>
 //admin giris yapmadiginda kullanicilari otomatik bir sayfaya yonlendirme 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
 {
-    options.LoginPath = "Blog/Index";
+    options.LoginPath = "/Blogs/Login";
 });
 
 builder.Services.AddIdentity<BlogIdentityUser,BlogIdentityRole>().AddEntityFrameworkStores<BlogIdentityDbContext>().AddDefaultTokenProviders();
@@ -40,11 +40,12 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();
 
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Admin}/{action=Index}/{id?}");
+    pattern: "{controller=Blogs}/{action=Index}/{id?}");
 
 app.Run();
