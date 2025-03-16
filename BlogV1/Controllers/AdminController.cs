@@ -1,6 +1,7 @@
 ﻿using BlogV1.Context;
 using BlogV1.Identity;
 using BlogV1.Models;
+using BlogV1.Models.ViewModels;
 using BlogV1.Models.VıewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -9,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BlogV1.Controllers
 
 {  
-    //[Authorize]
+    [Authorize]
     public class AdminController : Controller
     {
         private readonly BlogDbContext _context;
@@ -24,7 +25,33 @@ namespace BlogV1.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var dashboard = new DashboardViewModel();
+
+            var toplamblogsayisi = _context.Blogs.Count();
+            var toplamgoruntulenme = _context.Blogs.Select(x => x.ViewCount).Sum();
+            var encokgoruntulneneblog = _context.Blogs.OrderByDescending(x => x.ViewCount).FirstOrDefault();
+            var ensonyayinlananblog = _context.Blogs.OrderByDescending(x => x.publisDate).FirstOrDefault();
+            var toplamyorumsayisi = _context.Comments.Count();
+            var encokyorumalanblogId = _context.Comments
+                                        .GroupBy(x => x.BlogId) // BlogId'ye göre grupla
+                                        .OrderByDescending(g => g.Count()) // Grupları yorum sayısına göre azalan sırala
+                                        .Select(g => g.Key) // En çok yorumu olan BlogId'yi al
+                                        .FirstOrDefault(); // İlk sonucu getir
+            var encokyorumalanblog = _context.Blogs.Where(x => x.Id == encokyorumalanblogId).FirstOrDefault();
+
+            var bugunyapilanyorumsayisi = _context.Comments.Where(x => x.PublishDate.Date == DateTime.Now.Date).Count();
+
+            dashboard.TotalBlogCount = toplamblogsayisi;
+            dashboard.TotalViewCount = toplamgoruntulenme;
+            dashboard.MostViewedBlog = encokgoruntulneneblog;
+            dashboard.LatestBlog = ensonyayinlananblog;
+            dashboard.TotalCommentCount = toplamyorumsayisi;
+            dashboard.MostCommentedBlog = encokyorumalanblog;
+            dashboard.TodayCommentCount = bugunyapilanyorumsayisi;
+
+
+
+            return View(dashboard);
         }
         public IActionResult Blogs() {
             var blogs=_context.Blogs.ToList();
@@ -142,6 +169,11 @@ namespace BlogV1.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index","Blogs");
         
+        }
+        public IActionResult Contact()
+        {
+            var contact = _context.Contacts.ToList();
+            return View(contact);
         }
 
         

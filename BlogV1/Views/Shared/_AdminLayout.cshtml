@@ -44,7 +44,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="/Admin/Index.html">
+                <a class="nav-link" href="/Admin">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
@@ -71,6 +71,29 @@
                         <h6 class="collapse-header">Blog Islemleri:</h6>
                         <a class="collapse-item" href="/Admin/Blogs">Bloglarim</a>
                       
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <hr class="sidebar-divider">
+
+                <!-- Heading -->
+                <div class="sidebar-heading">
+                  Iletısım
+                </div>
+
+                <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseContact"
+                   aria-expanded="true" aria-controls="collapseContact">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Iletisim</span>
+                </a>
+                <div id="collapseContact" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Iletisim Islemleri:</h6>
+                        <a class="collapse-item" href="/Admin/Contact">Iletisimlerimiz</a>
+
                     </div>
                 </div>
             </li>
@@ -122,30 +145,6 @@
                     </div>
                 </div>
             </li>
-
-
-
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                   aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                     data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
-                    </div>
-                </div>
-            </li>
-
-
-
         </ul>
         <!-- End of Sidebar -->
         <!-- Content Wrapper -->
@@ -337,7 +336,7 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    Cikis Yap
                                 </a>
                             </div>
                         </li>
@@ -385,10 +384,10 @@
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Cikis yapiyorsunuz,Onayliyormusunuz ?</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="/Admin/Logout.html">Logout</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Hayir</button>
+                    <a class="btn btn-primary" href="/Admin/Logout">Onayliyorum</a>
                 </div>
             </div>
         </div>
