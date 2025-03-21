@@ -1,121 +1,209 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="msapplication-TileColor" content="#0E0E0E">
+    <meta name="template-color" content="#0E0E0E">
+    <meta name="description" content="Index page">
+    <meta name="keywords" content="index, page">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href=" /imgs/template/favicon.png">
+    <link href=" /css/style.css?v=2.0" rel="stylesheet">
     <title>Code With YILDIRIM</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="/js/cufon-yui.js"></script>
-    <script type="text/javascript" src="/js/arial.js"></script>
-    <script type="text/javascript" src="/js/cuf_run.js"></script>
-    <script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
-    <script type="text/javascript" src="/js/radius.js"></script>
 </head>
 <body>
-    @* // NEW THEMA COMING SOON *@
-    <!-- START PAGE SOURCE -->
-    <div class="main">
-        <div class="header">
-            <div class="header_resize">
-                <div class="menu_nav">
-                    <ul>
-                        <li class="active"><a href="/blogs/index">Anasayfa</a></li>
-                        <li><a href="/blogs/support">Destek</a></li>
-                        <li><a href="/blogs/about">Hakkimizda</a></li>
-                        <li><a href="/blogs/contact">Iletisim</a></li>
-                        <li><a href="/Admin">Admin Girisi</a></li>
-                    </ul>
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="text-center">
+                    <img class="mb-10" src=" /imgs/template/logo.png" alt="YILDIRIM">
+               
                 </div>
-                <div class="logo">
-                    <h1><a href="/blogs/index">YILDIRIM<span>Blogs</span></a> <small>Frene Basan Kaybeder!!</small></h1>
-                </div>
-                <div class="clr"></div>
-            </div>
-        </div>
-        <div class="content">
-            <div class="content_resize">
-
-                @RenderBody()
-
-                <div class="sidebar">
-                    <div class="searchform">
-                        <form id="formsearch" name="formsearch" method="post" action="#">
-                            <span>
-                                <input name="editbox_search" class="editbox_search" id="editbox_search" maxlength="80" value="" placeholder="Blog Ara" type="text" />
-                            </span>
-                            <input name="button_search" src="/images/search_btn.gif" class="button_search" type="image" />
-                        </form>
-                    </div>
-                    <div class="gadget">
-                        <h2 class="star"><span>Yan</span> Menu</h2>
-                        <div class="clr"></div>
-                        <ul class="sb_menu">
-                            <li><a href="/blogs/index">Anasayfa</a></li>
-                            <li><a href="/blogs/support">Destek</a></li>
-                            <li><a href="/blogs/about">Hakkimizda</a></li>
-                            <li><a href="/blogs/contact">Iletisim</a></li>
-                        </ul>
-                    </div>
-                    <div class="gadget">
-                        <h2 class="star"><span>Etiketler</span></h2>
-                        <div class="clr"></div>
-                        <ul class="ex_menu">
-                            <li>
-                                <a href="#">Tech</a><br />
-                            </li>
-                            <li>
-                                <a href="#">Software</a><br />
-                            </li>
-                            <li>
-                                <a href="#">Bilgisayar</a><br />
-                            </li>
-                            <li>
-                                <a href="#">Teknoloji</a><br />
-                            </li>
-                            <li>
-                                <a href="#">Yazilim</a><br />
-                            </li>
-                            <li>
-                                <a href="#">ai</a><br />
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="clr"></div>
-            </div>
-        </div>
-        <div class="fbg">
-            <div class="fbg_resize">
-                <div class="col c1">
-                    <h2><span>Galeri</span></h2>
-                    <a href="#"><img src="/images/pix1.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="/images/pix2.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="/images/pix3.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="/images/pix4.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="/images/pix5.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="/images/pix6.jpg" width="58" height="58" alt="" /></a>
-                </div>
-                <div class="col c2">
-                    <h2><span>Biz Kimiz</span></h2>
-                    <p>
-                        Code With YILDIRIM<br />
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. <a href="#">Morbi tincidunt, orci ac convallis aliquam</a>, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam.
-                    </p>
-                </div>
-                <div class="col c3">
-                    <h2><span>Iletisim</span></h2>
-                    <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue.</p>
-                    <p><a href="mailto:codewithyildirim@gmail.com">codewithyildirim@gmail.com</a></p>
-                    <p>
-                        +1 (123) 444-5677<br />
-                        +1 (123) 444-5678
-                    </p>
-                    <p>Los Angeles / USA</p>
-                </div>
-                <div class="clr"></div>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="footer_resize">
-                <p class="lf">Copyright &copy; 2025 <a href="#">Code With YILDIRIM</a> - All Rights Reserved</p>
-                <div class="clr"></div>
             </div>
         </div>
     </div>
-    <!-- END PAGE SOURCE -->
+    <header class="header sticky-bar bg-gray-900">
+        <div class="container">
+            <div class="main-header">
+                <div class="header-logo"><a class="d-flex" href="/Blogs/Index"><img class="logo-night" alt="YILDIRIM" src=" /imgs/template/logo.png"><img class="d-none logo-day" alt="YILDIRIM" src=" /imgs/template/logo-day.png"></a></div>
+                <div class="header-nav">
+                    <nav class="nav-main-menu d-none d-xl-block">
+                        <ul class="main-menu">
+                            <li >
+                                <a class="active" href="/Blogs/Index">Anasayfa</a>
+                               
+                            </li>
+                            <li >
+                                <a class="color-gray-500" href="/Blogs/About">Hakkımda</a>
+                              
+                            </li>
+                         
+                            <li >
+                                <a class="color-gray-500" href="/Blogs/Contact">Iletisim</a>
+                               
+                            </li>
+                           
+                       
+                        </ul>
+                    </nav>
+                    <div class="burger-icon burger-icon-white"><span class="burger-icon-top"></span><span class="burger-icon-mid"></span><span class="burger-icon-bottom"></span></div>
+                </div>
+                <div class="header-right text-end">
+                    <a class="btn btn-search" href="#"></a>
+                    <div class="form-search p-20">
+                        <form action="#">
+                            <input class="form-control" type="text" placeholder="Ara">
+                            <input class="btn-search-2" type="submit" value="">
+                        </form>
+                        <div class="popular-keywords text-start mt-20">
+                            <p class="mb-10 color-white">Popüler Etiketler:</p>
+                            <a class="color-gray-600 mr-10 font-xs" href="#"># Yazılım Geliştirme,</a>
+                            <a class="color-gray-600 mr-10 font-xs" href="#"># Web3,</a>
+                            <a class="color-gray-600 mr-10 font-xs" href="#"># Yapay Zeka,</a>
+                            <a class="color-gray-600 mr-10 font-xs" href="#"># Blockchain,</a>
+                            <a class="color-gray-600 mr-10 font-xs" href="#"># Kodlama Eğitimleri</a>
+                           
+                        </div>
+                    </div>
+                    <div class="switch-button">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" role="switch" checked="">
+                        </div>
+                    </div>
+                    <a class="btn btn-linear d-none d-sm-inline-block hover-up hover-shadow" href="/Admin">Giris Yap</a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <div class="mobile-header-active mobile-header-wrapper-style perfect-scrollbar bg-gray-900">
+        <div class="mobile-header-wrapper-inner">
+            <div class="mobile-header-content-area">
+                <div class="mobile-logo border-gray-800"><a class="d-flex" href="/Blogs/Index"><img class="logo-night" alt="GenZ" src=" /imgs/template/logo.png"><img class="d-none logo-day" alt="YILDIRIM" src=" /imgs/template/logo-day.png"></a></div>
+                <div class="perfect-scroll">
+                    <div class="mobile-menu-wrap mobile-header-border">
+                        <nav class="mt-15">
+                            <ul class="mobile-menu font-heading">
+                                <li>
+                                    <a class="active" href="/Blogs/Index">Anasayfa</a>
+
+                                </li>
+                                <li>
+                                    <a class="color-gray-500" href="/Blogs/About">Hakkımda</a>
+
+                                </li>
+
+                                <li>
+                                    <a class="color-gray-500" href="/Blogs/Contact">Iletisim</a>
+
+                                </li>
+
+                            </ul>
+
+                        </nav>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="main">
+        <div class="cover-home1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-1"></div>
+                    <div class="col-xl-10 col-lg-12">
+
+
+
+                      
+                        
+                                     @RenderBody()
+                     
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-1 bg-gray-850 border-gray-800">
+                <div class="row">
+                    <div class="col-lg-4 mb-30">
+                        <a class="wow animate__animated animate__fadeInUp" href="index.html">
+                            <img class="logo-night" src="/imgs/template/logo.png" alt="Yildirim">
+                            <img class="d-none logo-day" alt="Yildirim" src="/imgs/template/logo-day.svg">
+                        </a>
+                        <p class="mb-20 mt-20 text-sm color-gray-500 wow animate__animated animate__fadeInUp">
+                            Yazılım dünyasında güncel kalmak ister misiniz? Blogumuzda en yeni teknolojiler, kodlama rehberleri ve sektörel analizlerle bilgilerinizi ileri taşıyın
+                        </p>
+                        <h6 class="color-white mb-5 wow animate__animated animate__fadeInUp">Adres</h6>
+                        <p class="text-sm color-gray-500 wow animate__animated animate__fadeInUp">
+                            123 Ana Cadde<br>İstanbul, TR 34000
+                        </p>
+                    </div>
+              
+                    <div class="col-lg-4 mb-30">
+                        <h4 class="text-lg mb-30 color-white wow animate__animated animate__fadeInUp">Bülten</h4>
+                        <p class="text-base color-gray-500 wow animate__animated animate__fadeInUp">
+                            Yazılım dünyasındaki en yeni trendleri, ipuçlarını ve rehberleri keşfetmek için bizimle kalın. Kodlamaya dair her şey burada! 🚀
+                        </p>
+                        <div class="form-newsletters mt-15 wow animate__animated animate__fadeInUp">
+                            <form action="#">
+                                <div class="form-group">
+                                    <input class="input-name border-gray-500" type="text" placeholder="Adınız">
+                                </div>
+                                <div class="form-group">
+                                    <input class="input-email border-gray-500" type="email" placeholder="E-posta adresiniz">
+                                </div>
+                                <div class="form-group mt-20">
+                                    <button class="btn btn-linear hover-up">
+                                        Abone Ol
+                                        <i class="fi-rr-arrow-small-right"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom border-gray-800">
+                    <div class="row">
+                        <div class="col-lg-5 text-center text-lg-start">
+                            <p class="text-base color-white wow animate__animated animate__fadeIn">
+                                © Created by  <a class="copyright" href="https://eyupyldrm.com/" target="_blank">Code With YILDIRIM</a>
+                            </p>
+                        </div>
+                        <div class="col-lg-7 text-center text-lg-end">
+                            <div class="box-socials">
+                                <div class="d-inline-block wow animate__animated animate__fadeIn" data-wow-delay=".4s">
+                                    <a class="icon-socials icon-insta color-gray-500" href="https://www.instagram.com/codewithyildirim">Instagram</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="progressCounter progressScroll hover-up hover-neon-2">
+        <div class="progressScroll-border">
+            <div class="progressScroll-circle"><span class="progressScroll-text"><i class="fi-rr-arrow-small-up"></i></span></div>
+        </div>
+    </div>
+    <script src=" /js/vendors/modernizr-3.6.0.min.js"></script>
+    <script src=" /js/vendors/jquery-3.6.0.min.js"></script>
+    <script src=" /js/vendors/jquery-migrate-3.3.0.min.js"></script>
+    <script src=" /js/vendors/bootstrap.bundle.min.js"></script>
+    <script src=" /js/vendors/waypoints.js"></script>
+    <script src=" /js/vendors/wow.js"></script>
+    <script src=" /js/vendors/text-type.js"></script>
+    <script src=" /js/vendors/swiper-bundle.min.js"></script>
+    <script src=" /js/vendors/jquery.progressScroll.min.js"></script>
+    <script src=" /js/main.js?v=2.0"></script>
 </body>
 </html>
