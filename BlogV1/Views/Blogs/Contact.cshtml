@@ -1,34 +1,52 @@
 ﻿
-        <div class="mainbar">
-            <div class="article">
-                <h2><span>Iletisim</span></h2>
-                <div class="clr"></div>
-                <p>You can find more of my free template designs at my website. For premium commercial designs, you can check out DreamTemplate.com.</p>
-            </div>
-            <div class="article">
-                <h2><span>Bizimle iletisime </span> gec</h2>
-                <div class="clr"></div>
-                <form action="/Blogs/CreateContact" method="post" id="contactform">
-                    <ol>
-                        <li>
-                            <label for="name">Isim (zorunlu)</label>
-                            <input id="name" name="name" class="text" required />
-                        </li>
-                        <li>
-                            <label for="email">Email Adresi (zorunlu)</label>
-                            <input id="email" name="email" class="text" required />
-                        </li>
-                        <li>
-                            <label for="message">Mesajiniz</label>
-                            <textarea id="message" name="message" rows="8" cols="50"></textarea>
-                        </li>
-                        <li>
-                            <input type="image" name="imageField" id="imageField" src="/images/submit.gif" class="send" />
-                            <div class="clr"></div>
-                        </li>
-                    </ol>
-                </form>
+      
+<main class="main">
+    <div class="cover-home3">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 col-lg-12 m-auto">
+                    <div class="text-center mt-70">
+                        <h1 class="color-linear d-inline-block mb-30">İletişim</h1>
+                        <p class="text-xl color-gray-500">Ben Yıldırım, bir dijital içerik üreticisi ve full stack yazılım geliştiriciyim. Web ve mobil uygulama geliştirme konusunda tutkulu bir ekibin parçasıyım. Tasarım ve kodlama kalitesi konusunda mükemmelliği hedefliyorum. Hız, güvenlik ve SEO dostu çözümler her zaman önceliğimdir.<br class="d-none d-lg-block"></p>
+                    </div>
+                    <div class="text-center mt-30">
+                        <div class="d-inline-block support text-start">(01) 6532-430-309</div>
+                        <div class="d-inline-block plane text-start">Gaziantep<br>Turkiye </div>
+                    </div>
+                    <form action="/Blogs/CreateContact" method="post" id="contactform">
+                        <div class="text-center">
+                            <h3 class="color-linear d-inline-block mb-10">Bize Ulaşın</h3>
+                            <p class="text-xs color-gray-500">E-posta adresiniz yayınlanmayacaktır. Zorunlu alanlar * ile işaretlenmiştir.</p>
+                        </div>
+                        <div class="row mt-50">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <input class="form-control bg-gray-850 border-gray-800 color-gray-500" type="text" placeholder="Adınız *" id="name" name="name" required />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <input class="form-control bg-gray-850 border-gray-800 color-gray-500" type="text" placeholder="E-posta *" id="email" name="email" required />
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <textarea class="form-control bg-gray-850 border-gray-800 color-gray-500" rows="5" placeholder="Mesajınız *" id="message" name="message"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="text-center mb-50">
+                                    <button type="submit" class="btn btn-linear btn-load-more btn-radius-8 hover-up">
+                                        Mesaj Gönder
+                                        <i class="fi-rr-arrow-small-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
             </div>
         </div>
-       
- 
+    </div>
+</main>

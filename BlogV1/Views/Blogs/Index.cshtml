@@ -1,28 +1,153 @@
-﻿
+﻿@model List<Blog>
+
+<div class="banner banner-home2">
+    <div class="text-center">
+        <h6 class="color-gray-600">Code with YILDIRIM ile yazılım dünyasında adım at, gelişim yolculuğuna hemen başla</h6>
+        <h1 class="color-white">
+            Code with <span class="color-linear"> YILDIRIM </span>
+            <br class="d-none d-lg-block">Yazılım Yolculuğunuz
+            <span class="color-linear">  Başlasın! </span>
+        </h1>
+    </div>
 
 
-@model List<Blog>
+    <div class="text-center mt-50">
+        <ul class="list-tags-col-5 mb-50 text-center">
+            <li>
+                <div class="card-style-2 hover-up hover-neon wow animate__animated animate__fadeInUp" data-wow-delay="0s">
+                    <div class="card-image"><a href="#"><img src="/imgs/page/homepage1/tag1.png" alt="Genz"></a></div>
+                    <div class="card-info"><a class="color-gray-500" href="#">Frontend Geliştirme</a></div>
+                </div>
+            </li>
+            <li>
+                <div class="card-style-2 hover-up hover-neon wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+                    <div class="card-image"><a href="#"><img src="/imgs/page/homepage1/tag2.png" alt="Genz"></a></div>
+                    <div class="card-info"><a class="color-gray-500" href="#">Backend Geliştirme</a></div>
+                </div>
+            </li>
+            <li>
+                <div class="card-style-2 hover-up hover-neon wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                    <div class="card-image"><a href="#"><img src="/imgs/page/homepage1/tag3.png" alt="Genz"></a></div>
+                    <div class="card-info"><a class="color-gray-500" href="#">Mobil Uygulama Geliştirme</a></div>
+                </div>
+            </li>
+            <li>
+                <div class="card-style-2 hover-up hover-neon wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                    <div class="card-image"><a href="#"><img src="/imgs/page/homepage1/tag4.png" alt="Genz"></a></div>
+                    <div class="card-info"><a class="color-gray-500" href="#">DevOps</a></div>
+                </div>
+            </li>
+            <li>
+                <div class="card-style-2 hover-up hover-neon wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                    <div class="card-image"><a href="#"><img src="/imgs/page/homepage1/tag5.png" alt="Genz"></a></div>
+                    <div class="card-info"><a class="color-gray-500" href="#">Yapay Zeka ve Makine Öğrenmesi</a></div>
+                </div>
+            </li>
+            <li>
+                <div class="card-style-2 hover-up hover-neon wow animate__animated animate__fadeInUp" data-wow-delay="0.0s">
+                    <div class="card-image"><a href="#"><img src="/imgs/page/homepage1/tag7.png" alt="Genz"></a></div>
+                    <div class="card-info"><a class="color-gray-500" href="#">Veri Bilimi</a></div>
+                </div>
+            </li>
+            <li>
+                <div class="card-style-2 hover-up hover-neon wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+                    <div class="card-image"><a href="#"><img src="/imgs/page/homepage1/tag8.png" alt="Genz"></a></div>
+                    <div class="card-info"><a class="color-gray-500" href="#">Bulut Bilişim</a></div>
+                </div>
+            </li>
+            <li>
+                <div class="card-style-2 hover-up hover-neon wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                    <div class="card-image"><a href="#"><img src="/imgs/page/homepage1/tag9.png" alt="Genz"></a></div>
+                    <div class="card-info"><a class="color-gray-500" href="#">Siber Güvenlik</a></div>
+                </div>
+            </li>
+            <li>
+                <div class="card-style-2 hover-up hover-neon wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                    <div class="card-image"><a href="#"><img src="/imgs/page/homepage1/tag10.png" alt="Genz"></a></div>
+                    <div class="card-info"><a class="color-gray-500" href="#">Blockchain ve Kripto</a></div>
+                </div>
+            </li>
+        </ul>
+    </div>
 
 
-<div class="mainbar">
+</div>
+
+
+<div class="row mt-70">
     @foreach (var item in Model)
     {
-        <div class="article">
-            <h2><span>@item.Name</span> </h2>
-            <div class="clr"></div>
-            <p><span class="date">@item.publisDate
-                .ToString("MMMM d\\t\\h, yyyy 'at' h:mm tt")</span>  &nbsp;|&nbsp; Etiketler <a href="#">@item.Tags</a> </p>
-            <img src="@item.Imageurl" width="625" height="205" alt="" />
-            @{
-                string description = item.Description;
-                string newdescription= description.Length>50 ? description.Substring(0,250) +"...." : description;
-            }
-        <p>@newdescription</p>
-            <p class="spec">
-                <a href="/Blogs/Details?id=@item.Id" class="rm">Daha Fazla Oku &raquo;</a>
-            <a href="#" class="com" style="margin-left:5px;"><span>@item.CommentCount</span> Yorum</a>
-                @* <a href="#" class="com" style="margin-left:5px;"><span>@item.LikeCount</span> Begeni</a> *@
-                <a href="#" class="com" style="margin-left:5px;"><span>@item.ViewCount</span> Goruntulenme</a>
-            </p>
-    </div> }
+        <div class="col-lg-6 wow animate__animated animate__fadeIn" data-wow-delay="0">
+
+            <div class="card-blog-1 hover-up">
+                <div class="card-image mb-20"><a class="post-type" href="/Blogs/Details?id=@item.Id"></a><a href="single-sidebar.html"><img src="@item.Imageurl" alt="Blog gorseli"></a></div>
+                <div class="card-info">
+                    <div class="row">
+                        <div class="col-7"><a class="color-gray-700 text-sm" href="#">@item.Tags</a></div>
+
+                    </div><a href="single-sidebar.html">
+                        <h4 class="color-white mt-20">
+                            @item.Name
+                        </h4>
+                    </a>
+                    <div class="row align-items-center mt-25">
+                        <div class="col-7">
+                            <div class="box-author">
+
+                                <div class="author-info">
+                                    <span class="color-gray-700 text-sm">@item.publisDate</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5 text-end"><a class="readmore color-gray-500 text-sm" href="/Blogs/Details?id=@item.Id"><span>Daha Fazla Oku</span></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>}
+
+
+
+</div>
+
+
+
+<div class="text-center mt-70">
+    <h2 class="color-linear mb-10">Blog Yazılarımız İle Yüksel, Öğren!</h2>
+    <p class="text-lg color-gray-500">Popüler Yazılarımız</p>
+</div>
+<div class="mb-70 mt-70">
+    <div class="box-topics box-topics-2 border-gray-800 bg-gray-850">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="box-swiper">
+                    <div class="swiper-container swiper-group-6">
+                        <div class="swiper-wrapper">
+                            @foreach (var item in Model)
+                            {
+                                <div class="swiper-slide">
+                                    <div class="card-style-1">
+                                        <a href="/Blogs/Details?id=@item.Id">
+                                        <div class="card-image">
+                                                <img src=" @item.Imageurl" alt="@item.Name">
+                                            <div class="card-info">
+                                                <div class="info-bottom">
+                                                        <h6 class="color-white mb-5">@item.Name.Substring(0, Math.Min(item.Name.Length, 10))</h6>
+                                                        <p class="text-xs color-gray-500"> Görüntülenme Sayısı:@item.ViewCount</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>}
+                         
+                          
+                        
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev swiper-button-prev-style-2"></div>
+                    <div class="swiper-button-next swiper-button-next-style-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
