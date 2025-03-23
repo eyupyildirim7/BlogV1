@@ -1,4 +1,4 @@
-# Blog Site Project
+# Personal Blog Site
 
 This project is a blog site developed using ASP.NET Core MVC. It allows users to create blog posts, leave comments, and use a contact form.
 
