@@ -14,6 +14,7 @@ This project is a blog site developed using ASP.NET Core MVC. It allows users to
 - **ASP.NET Core MVC**: Web application development framework.
 - **Entity Framework Core**: ORM for database operations.
 - **Identity**: User management and authentication.
+- **Microsoft SQL Server**: Database management system.
 
 ## Project Screenshots
 ![image](https://github.com/user-attachments/assets/b14fd89c-1ef9-44e2-84a4-1f43824454a1)
